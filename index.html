@@ -256,6 +256,26 @@
                 </p>
             </article>
 
+            <!--TODO: Delete this after lab1-->
+            <pre><code>
+                def query_vec(self, query):
+                    pattern = re.compile('[\W_]+')
+                    query = pattern.sub(' ', query)
+                    queryls = query.split()
+                    queryVec = [0]*len(queryls)
+                    index = 0
+                    for ind, word in enumerate(queryls):
+                    queryVec[index] = self.queryFreq(word, query)
+                    index += 1
+                    queryidf = [self.index.idf[word] for word in self.index.getUniques()]
+                    magnitude = pow(sum(map(lambda x: x**2, queryVec)), .5)
+                    freq = self.termfreq(self.index.getUniques(), query)
+
+                    tf = [x/magnitude for x in freq]
+                    final = [tf[i]*queryidf[i] for i in range(len(self.index.getUniques()))]
+
+                    return final
+            </code></pre>
         </section>
     </main>
 
