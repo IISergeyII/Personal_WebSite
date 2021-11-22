@@ -146,6 +146,10 @@ a {
     position: relative;
 }
 
+.social-icon {
+    font-size: 72px;
+}
+
 .social-icon-2 {
     font-size: 36px;
     color: white;
@@ -161,4 +165,77 @@ a {
 
 .about i {
     color: white;
+}
+
+.subheading {
+    font-family: "Rubik";
+    font-weight: 900;
+    font-size: 18px;
+    font-display: swap;
+}
+
+.desc {
+    padding-top: 50px;
+}
+
+.desc p {
+    color: #333;
+}
+
+.desc t {
+    color: #222222;
+    font-weight: 700;
+}
+
+.desc imp {
+    padding: 6px;
+    color: white;
+    background: #222222;
+}
+
+.desc more {
+    color: #616669;
+}
+
+.desc .col-lg-3 {
+    text-transform: uppercase;
+}
+
+sm {
+    font-size: 12px;
+}
+
+.container .row p.tight {
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-family: "Rubik";
+    font-weight: 900;
+    font-size: 18px;
+    font-display: swap;
+}
+
+
+.footer {
+    background: #222222;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer p {
+    color: white;
+}
+
+.footer h5 {
+    color: white;
+}
+
+.footer t {
+    font-weight: 700;
+}
+
+td {
+    color: white;
+    padding-right: 20px;
 }
