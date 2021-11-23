@@ -60,7 +60,14 @@ p {
     }
 }
 
-#nav-menu {
+#navmenu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+
     background-color: #00335b;
     padding: 0 !important;
     width: 100%;
@@ -93,11 +100,7 @@ p {
 
 a {
     color: #4ea5d9;
-}
 
-.nav-link {
-    font-size: 18px;
-    color: white !important;
 }
 
 .active {
@@ -238,4 +241,94 @@ sm {
 td {
     color: white;
     padding-right: 20px;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: inherit;
+}
+
+.tablinks {
+    color: aliceblue;
+    word-wrap: break-word;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tab button {
+    background-color: #222222;
+    border: solid;
+    cursor: pointer;
+    padding: 16px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: white;
+    color: #4ea5d9;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px; /* top, bottom = 6, left, right = 12*/
+}
+.closeSkill {
+    text-align: right;
+}
+
+.skill {
+    border: 2px solid #222222;
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+/* === NEW === */
+.navbar-nav {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-bottom: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#navicon {
+    width: 2em;
+    border-radius: 50%;
+}
+
+
+.navbar-toggler {
+    display: inline-block;
+    margin-top: 0.3125rem;
+    margin-bottom: 0.3125rem;
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-brand {
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.nav-link {
+    font-size: 18px;
+    display: block;
+    color: white !important;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: #4ea5d9 !important;
 }

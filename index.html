@@ -36,15 +36,23 @@
           rel="stylesheet" type='text/css'>
 
     <!-- JS -->
+    <!-- Font Awesome Logos JS-->
     <script src="https://kit.fontawesome.com/07084a9fe4.js" crossorigin="anonymous"></script>
+
+    <!--jQuery JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- main JS -->
     <script src="js/main.js"></script>
+
+
 
 </head>
 
 <body>
 
 <!--NAVIGATION-->
-<nav id="nav-menu" class="navbar navbar-dark fixed-top navbar-expand-lg">
+<nav id="navmenu" class="navbar navbar-dark fixed-top navbar-expand-lg">
     <div class="container col-lg-12">
         <div class="collapse navbar-collapse" id="outerNavbar">
             <ul class="navbar-nav mx-auto">
@@ -59,11 +67,19 @@
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
             </ul>
         </div>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse" data-target="#outerNavbar"
+                aria-controls="outerNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
     </div>
 </nav>
 
-<!--HEADER -->
-<div id="home" class="header">
+<!--HEADER SECTION-->
+<div id="home" class="header navsection">
     <div class="container">
         <div class="row centered">
             <div class="col-lg-12">
@@ -76,7 +92,7 @@
 </div>
 
 <!-- ABOUT -->
-<div class="about" id="about">
+<div id="about" class="about navsection">
     <div style="text-align: center">
         <h5 class="subheading">ABOUT ME</h5>
     </div>
@@ -279,6 +295,134 @@
     <hr>
 </div>
 
+<!-- SKILLS SECTION -->
+<div id="skills" class="container desc navsection">
+    <div class="row">
+        <div class="col-lg-2 offset-lg-1">
+            <!-- Skills Heading-->
+            <h5 class="subheading">SKILLS & PROFICIENCIES</h5>
+        </div>
+        <!-- Skillset Tabs -->
+        <div class="tab">
+            <button class="tablinks" onclick="openSkill('DataScience')">
+                Data Science
+            </button>
+            <button class="tablinks" onclick="openSkill('GeneralProgramming')">
+                General Programming
+            </button>
+            <button class="tablinks" onclick="openSkill('ProductManagement')">
+                Product Management
+            </button>
+            <button class="tablinks" onclick="openSkill('Lang')">
+                Languages
+            </button>
+        </div>
+
+        <!-- Skillset #1 -->
+        <div id="DataScience" class="col-lg-9 offset-lg-3 tabcontent">
+            <p>
+                <t>Data Science</t>
+                <span class="closeSkill"`
+                      onclick="closeSkill(this)">
+                    <i class="fas fa-times-circle"></i>
+                </span>
+                <br>
+            <div>
+                <div class="skill">
+                    <sm>Python</sm>
+                </div>
+                <div class="skill">
+                    <sm>R (Statistics)</sm>
+                </div>
+                <div class="skill">
+                    <sm>SQL</sm>
+                </div>
+            </div>
+            </p>
+        </div>
+
+        <!-- Skillset #2 -->
+        <div id="GeneralProgramming" class="col-lg-9 offset-lg-3 tabcontent">
+            <p>
+                <t>General Programming</t>
+                <span class="closeSkill"
+                      onclick="closeSkill(this)">
+                    <i class="fas fa-times-circle"></i>
+                </span>
+                <br>
+            <div>
+                <div class="skill">
+                    <sm>Java</sm>
+                </div>
+                <div class="skill">
+                    <sm>C++</sm>
+                </div>
+                <div class="skill">
+                    <sm>HTML</sm>
+                </div>
+                <div class="skill">
+                    <sm>CSS</sm>
+                </div>
+                <div class="skill">
+                    <sm>JS</sm>
+                </div>
+                <div class="skill">
+                    <sm>Git</sm>
+                </div>
+            </div>
+            </p>
+        </div>
+
+        <!-- Skillset #3 -->
+        <div id="ProductManagement" class="col-lg-9 offset-lg-3 tabcontent">
+            <p>
+                <t>Product Management</t>
+                <span class="closeSkill"
+                      onclick="closeSkill(this)">
+                    <i class="fas fa-times-circle"></i>
+                </span>
+                <br>
+            <div>
+                <div class="skill">
+                    <sm>Jira</sm>
+                </div>
+                <div class="skill">
+                    <sm>Confluence</sm>
+                </div>
+                <div class="skill">
+                    <sm>Unit economy</sm>
+                </div>
+            </div>
+            </p>
+        </div>
+
+        <!-- Skillset #4 -->
+        <div id="Lang" class="col-lg-9 offset-lg-3 tabcontent">
+            <p>
+                <t>Languages</t>
+                <span class="closeSkill"
+                      onclick="closeSkill(this)">
+                    <i class="fas fa-times-circle"></i>
+                </span>
+                <br>
+            <div>
+                <div class="skill">
+                    <sm>English</sm>
+                </div>
+                <div class="skill">
+                    <sm>Russian</sm>
+                </div>
+                <div class="skill">
+                    <sm>Swedish</sm>
+                </div>
+            </div>
+            </p>
+        </div>
+
+    </div>
+    <br>
+    <hr>
+</div>
 
 <!-- EDUCATION SECTION -->
 <div id="education" class="container desc navsection">
@@ -339,6 +483,8 @@
     <br>
     <hr>
 </div>
+
+
 
 <!--CONTACT SECTION-->
 <section id="contact" name="contact" class="navsection"></section>
@@ -441,6 +587,12 @@
                 </p>
             </div>
         </div>
+
+        <!-- TODO: delete -->
+        <div class="row footer-time">
+
+        </div>
+
     </div>
 </div>
 
