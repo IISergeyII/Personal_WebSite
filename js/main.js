@@ -26,11 +26,3 @@ window.addEventListener('scroll', function(e) {
         }
     });
 });
-
-
-window.onload = function () {
-    var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-    var footer = document.getElementsByClassName('footer-time')[0];
-    footer.innerHTML += '<p>Page load time is ' + loadTime + ' seconds</p>';
-
-}
