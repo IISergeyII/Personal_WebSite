@@ -2,14 +2,8 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-function addPhoto(url) {
-
-    $("#todo-generated-table").append(`<img src="${url}" alt="${url}">`);
-
-    /*
-    $("#todo-generated-table").append(`<img src="${url}" alt="${url}">`);
-     */
-
+function addTodoElem(title) {
+    $("#todo-generated-table").append(`<p class="todo-elem"> "${title}" </p>`);
 }
 
 function displayErrorMessage() {
@@ -17,35 +11,35 @@ function displayErrorMessage() {
     $("#error-message").removeClass("none_display");
 }
 
-function displayLoading() {
+function displayLoadingGif() {
     $("#loading-gif").removeClass("none_display");
     $("#error-message").addClass("none_display");
 }
 
-function successfulLoading() {
+function finishLoading() {
     $("#loading-gif").addClass("none_display");
 }
 
+
 function onLoadMore() {
-    displayLoading();
+    displayLoadingGif();
 
     setTimeout(() => {
         if (getRandomInt(2) === 1) {
-            console.log("Не повезло :)");
             displayErrorMessage();
             return;
         }
 
-        fetch('https://jsonplaceholder.typicode.com/photos')
+        fetch('https://jsonplaceholder.typicode.com/todos')
             .then(response => response.json())
             .then(json => json[getRandomInt(json.length)])
-            .then(json_elem => {console.log(json_elem); return json_elem})
-            .then(json_elem => addPhoto(json_elem['url']))
-            .catch(error => {
-                console.log(error);
+            .then(json_elem => addTodoElem(json_elem['title']))
+            .catch(() => {
                 displayErrorMessage();
             });
-        successfulLoading();
+
+        finishLoading();
+
     }, 1000);
 }
 

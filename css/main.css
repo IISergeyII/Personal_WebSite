@@ -340,6 +340,7 @@ td {
 #todo-generated-table {
     display: flex;
     flex-wrap: wrap;
+    flex-flow: row wrap;
     align-content: center;
     justify-content: space-evenly;
 }
@@ -363,4 +364,9 @@ td {
     width: 150px;
     height: 150px;
     margin: 25px;
+}
+
+.todo-elem {
+    color: green;
+    flex: 100%;
 }
