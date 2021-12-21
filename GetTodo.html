@@ -53,14 +53,17 @@
 <main>
 
     <h1>ToDo generator</h1>
-    <button id="button_load_more">Get new ToDo</button>
-    <div id="holder"></div>
-    <div class="section__article_center">
-        <img class="none_display" id="loading_circle" src="/images/todo_gif.gif" alt="Loading">
-        <p class="none_display" id="error_message">Error when loading image</p>
+    <button id="button-generate">Get new ToDo</button>
+    <div id="todo-generated-table"></div>
+
+    <div class="todo-response">
+        <img class="none_display" id="loading-gif" src="/images/todo_loader.gif" alt="Loading">
+        <p class="none_display" id="error-message">Something went wrong!</p>
     </div>
 
     <!--
+    button_load_more
+
     <article>
         <section>
             <div class="todo-table">

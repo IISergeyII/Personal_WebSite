@@ -336,3 +336,31 @@ td {
 .none_display {
     display: none;
 }
+
+#todo-generated-table {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.todo-response {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#loading-gif {
+    width: 300px;
+}
+
+#error-message {
+    color: red !important;
+}
+
+#holder img {
+    width: 150px;
+    height: 150px;
+    margin: 25px;
+}

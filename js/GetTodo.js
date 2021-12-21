@@ -3,21 +3,27 @@ function getRandomInt(max) {
 }
 
 function addPhoto(url) {
-    $("#holder").append(`<img src="${url}" alt="${url}">`);
+
+    $("#todo-generated-table").append(`<img src="${url}" alt="${url}">`);
+
+    /*
+    $("#todo-generated-table").append(`<img src="${url}" alt="${url}">`);
+     */
+
 }
 
 function displayErrorMessage() {
-    $("#loading_circle").addClass("none_display");
-    $("#error_message").removeClass("none_display");
+    $("#loading-gif").addClass("none_display");
+    $("#error-message").removeClass("none_display");
 }
 
 function displayLoading() {
-    $("#loading_circle").removeClass("none_display");
-    $("#error_message").addClass("none_display");
+    $("#loading-gif").removeClass("none_display");
+    $("#error-message").addClass("none_display");
 }
 
 function successfulLoading() {
-    $("#loading_circle").addClass("none_display");
+    $("#loading-gif").addClass("none_display");
 }
 
 function onLoadMore() {
@@ -43,4 +49,4 @@ function onLoadMore() {
     }, 1000);
 }
 
-$('#button_load_more').on('click', onLoadMore);
+$('#button-generate').on('click', onLoadMore);
