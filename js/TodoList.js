@@ -54,6 +54,7 @@ function addNewItem() {
 }
 
 
+
 document.querySelector("#todo-table-form").addEventListener('submit', event => {
     addNewItem(event);
     return false;
